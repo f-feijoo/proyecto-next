@@ -1,10 +1,22 @@
 "use client";
 import { useParams } from "next/navigation";
 import React from "react";
+import mockData from "@/data/mockData";
+import ProductList from "@/components/ProductList";
 
 const Categoria = () => {
   const { categoria } = useParams();
-  return <h1>Esta pagina es por el tipo: { categoria }</h1>;
+  const filterData =
+    categoria === "all"
+      ? mockData
+      : mockData.filter(
+          (item) => item.category.toLowerCase() === categoria.toLowerCase()
+        );
+  return (
+    <>
+      <ProductList category={categoria} data={filterData} />
+    </>
+  );
 };
 
 export default Categoria;

@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body className={inter.className}>
         <Navbar/>
-        <main className="grow p-3">{children}</main>        
+        <main className="h-auto p-3">{children}</main>        
         <Footer/>
         </body>
     </html>

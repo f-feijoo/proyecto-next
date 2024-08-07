@@ -29,7 +29,9 @@ const MenuList = ({ open, handleClose }) => {
         <nav className="flex mt-4 flex-col gap-3 px-3">
           <Link
             href="/"
-            className={`${path === "/" ? "underline text-amber-600 font-bold " : ""}text-white p-2`}
+            className={`${
+              path === "/" ? "underline text-amber-500 font-bold " : ""
+            }text-white p-2`}
             onClick={() => {
               if (open) {
                 handleClose();
@@ -40,7 +42,9 @@ const MenuList = ({ open, handleClose }) => {
           </Link>
           <Link
             href="/productos"
-            className={`${path === "/productos" ? "underline text-amber-600 font-bold " : ""}text-white p-2`}
+            className={`${
+              path === "/productos" ? "underline text-amber-500 font-bold " : ""
+            }text-white p-2`}
             onClick={() => {
               if (open) {
                 handleClose();
@@ -51,7 +55,9 @@ const MenuList = ({ open, handleClose }) => {
           </Link>
           <Link
             href="/carrito"
-            className={`${path === "/carrito" ? "underline text-amber-600 font-bold " : ""}text-white p-2`}
+            className={`${
+              path === "/carrito" ? "underline text-amber-500 font-bold " : ""
+            }text-white p-2`}
             onClick={() => {
               if (open) {
                 handleClose();
@@ -62,7 +68,9 @@ const MenuList = ({ open, handleClose }) => {
           </Link>
           <Link
             href="/nosotros"
-            className={`${path === "/nosotros" ? "underline text-amber-600 font-bold " : ""}text-white p-2`}
+            className={`${
+              path === "/nosotros" ? "underline text-amber-500 font-bold " : ""
+            }text-white p-2`}
             onClick={() => {
               if (open) {
                 handleClose();
