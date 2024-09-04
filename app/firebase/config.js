@@ -1,3 +1,5 @@
+import 'dotenv/config'
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
@@ -6,7 +8,7 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCwk_rV62vo1z6qw-p5eK63UTTRo7KDDRs",
+  apiKey: process.env.FIREBASE_APIKEY,
   authDomain: "coder-next-ea000.firebaseapp.com",
   projectId: "coder-next-ea000",
   storageBucket: "coder-next-ea000.appspot.com",
