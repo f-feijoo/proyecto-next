@@ -1,20 +1,20 @@
-"use client";
-import { useParams } from "next/navigation";
 import React from "react";
-import mockData from "@/data/mockData";
 import ProductList from "@/components/ProductList";
 
-const Categoria = () => {
-  const { categoria } = useParams();
-  const filterData =
-    categoria === "all"
-      ? mockData
-      : mockData.filter(
-          (item) => item.category.toLowerCase() === categoria.toLowerCase()
-        );
+const getProductos = async (category) => {
+  const data = await fetch(`http://localhost:3000/api/productos/${category}`, {
+    cache: "no-store",
+  });
+  const productos = await data.json();
+  return productos;
+};
+
+const Categoria = async ({ params }) => {
+  const { categoria } = params;
+  const productos = await getProductos(categoria);
   return (
     <>
-      <ProductList category={categoria} data={filterData} />
+      <ProductList category={categoria} data={productos} />
     </>
   );
 };

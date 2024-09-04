@@ -1,10 +1,12 @@
-import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
-const ProductCard = ({ title, description, price, category, id }) => {
+const ProductCard = ({ title, description, price, category, image }) => {
   return (
-    <Link href={`/producto/${id}`}>
     <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
+      <div className="text-center">
+        <Image src={image} alt={title} width={100} height={100} />
+      </div>
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{title}</div>
         <hr />
@@ -19,7 +21,7 @@ const ProductCard = ({ title, description, price, category, id }) => {
         </span>
       </div>
     </div>
-    </Link>
+   
   );
 };
 

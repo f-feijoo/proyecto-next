@@ -17,10 +17,10 @@ const NavigationMenu = () => {
       <ul className="flex space-x-4 justify-center">
         <li
           className={`${
-            path === "/productos" ? "underline text-amber-500 font-bold" : ""
-          } text-white`}
+            path === "/productos" ? "underline text-amber-500 font-bold" : "text-white"
+          } `}
         >
-          <Link href={`/productos/`}>All</Link>
+          <Link href={`/productos/`}>all</Link>
         </li>
         {categories.map((category, index) => (
           <li
@@ -28,8 +28,8 @@ const NavigationMenu = () => {
             className={`${
               path === "/productos/" + category.toLowerCase()
                 ? "underline text-amber-500 font-bold"
-                : ""
-            } text-white`}
+                : "text-white"
+            } `}
           >
             <Link href={`/productos/${category.toLowerCase()}`}>
               {category}

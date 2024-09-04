@@ -30,8 +30,8 @@ const MenuList = ({ open, handleClose }) => {
           <Link
             href="/"
             className={`${
-              path === "/" ? "underline text-amber-500 font-bold " : ""
-            }text-white p-2`}
+              path === "/" ? "underline text-amber-500 font-bold " : "text-white"
+            } p-2`}
             onClick={() => {
               if (open) {
                 handleClose();
@@ -43,8 +43,8 @@ const MenuList = ({ open, handleClose }) => {
           <Link
             href="/productos"
             className={`${
-              path === "/productos" ? "underline text-amber-500 font-bold " : ""
-            }text-white p-2`}
+              path === "/productos" ? "underline text-amber-500 font-bold " : "text-white"
+            } p-2`}
             onClick={() => {
               if (open) {
                 handleClose();
@@ -56,8 +56,8 @@ const MenuList = ({ open, handleClose }) => {
           <Link
             href="/carrito"
             className={`${
-              path === "/carrito" ? "underline text-amber-500 font-bold " : ""
-            }text-white p-2`}
+              path === "/carrito" ? "underline text-amber-500 font-bold " : "text-white"
+            } p-2`}
             onClick={() => {
               if (open) {
                 handleClose();
@@ -69,8 +69,8 @@ const MenuList = ({ open, handleClose }) => {
           <Link
             href="/nosotros"
             className={`${
-              path === "/nosotros" ? "underline text-amber-500 font-bold " : ""
-            }text-white p-2`}
+              path === "/nosotros" ? "underline text-amber-500 font-bold " : "text-white"
+            } p-2`}
             onClick={() => {
               if (open) {
                 handleClose();
