@@ -17,7 +17,7 @@ const ProductCard = ({ title, description, price, category, image }) => {
           {category}
         </span>
         <span className="inline-block bg-amber-500 rounded-full px-3 py-1 text-sm font-semibold text-black mr-2 mb-2">
-          {price}
+          ${price}
         </span>
       </div>
     </div>

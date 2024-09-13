@@ -6,10 +6,12 @@ import Link from "next/link";
 const ProductList = ({data}) => {
   return (
     <div className='flex flex-wrap justify-center bg-gray-500 items-center'>
-        {data.map((product) =>(
-          <Link key={product.slug} href={`/producto/${product.slug}`}>
+        {data.map((product, index) =>(
+          
+          <Link key={product.id} href={'/producto/'+product.id}>
             <ProductCard
-            image={product.image}
+            key={product.id}
+            image={product.images[0]}
             title={product.title}
             description={product.description}
             price={product.price}
